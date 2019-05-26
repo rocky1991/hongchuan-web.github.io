@@ -11,17 +11,27 @@
 </head>
 <body>
 	<script>
+		var a,b;
+		a = 5;
+		// b = 6
+	</script>
+
+	<script>
 		console.log("first log!!")
 	</script>
-	<script>
+	<!-- <script>
 		window.alert("first alert!!!")
 	</script>
-	<button onclick="document.write(5)">This will delete existing html</button>
+ -->	<button onclick="document.write(5)">This will delete existing html</button>
 	<button onclick=eFunc()>external</button>
 	<button onclick=myF()>func</button>
 	<p id="demo1"></p>
 	<script> 
-		document.getElementById("demo1").innerHTML="change paragraph"
+		var x,y;
+		x = 5;
+		y = 6;
+		y = x+3;
+		document.getElementById("demo1").innerHTML= typeof(y);
 	</script>
 	<script src="myS.js"></script>
 	<button onclick='document.getElementById("paraph1").style.fontSize="35px"'> change font</button>
