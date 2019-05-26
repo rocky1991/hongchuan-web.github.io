@@ -2,10 +2,28 @@
 <html>
 <head>
 	<title> for javascript</title>
+	<script>
+		function myF(){
+			document.getElementById("demo1").innerHTML="function add content"
+		}
+	</script>
+	
 </head>
 <body>
-
-
+	<script>
+		console.log("first log!!")
+	</script>
+	<script>
+		window.alert("first alert!!!")
+	</script>
+	<button onclick="document.write(5)">This will delete existing html</button>
+	<button onclick=eFunc()>external</button>
+	<button onclick=myF()>func</button>
+	<p id="demo1"></p>
+	<script> 
+		document.getElementById("demo1").innerHTML="change paragraph"
+	</script>
+	<script src="myS.js"></script>
 	<button onclick='document.getElementById("paraph1").style.fontSize="35px"'> change font</button>
 	<button onclick='document.getElementById("paraph1").style.display="none"'> hide </button>
 	<button onclick='document.getElementById("paraph1").style.display="block"'>show</button>
