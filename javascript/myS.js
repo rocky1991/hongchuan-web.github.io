@@ -1,3 +1,6 @@
 function eFunc(){
-	document.getElementById("demo1").innerHTML="5+6";
+	var a = {firstName:"John",
+			 lastName:"Doe"};
+	var cars = ["Saab","bmw","Benz"]
+	document.getElementById("demo1").innerHTML= typeof cars;
 }
