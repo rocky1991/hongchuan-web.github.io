@@ -6,10 +6,20 @@
 		function myF(){
 			document.getElementById("demo1").innerHTML="function add content"
 		}
+		function displayDate(){
+			document.getElementById("demo1").innerHTML=Date();
+		}
+		function strLen(){
+			var a = "asdf"
+			document.getElementById("demo1").innerHTML=a.length;
+		}
 	</script>
 	
 </head>
 <body>
+	<button onclick="strLen()">Str Len</button>
+	<button onclick="displayDate()">Time is </button>
+	<button onclick="this.innerHTML=Date()">The time is </button><br>
 	<script>
 		var a,b;
 		a = 5;
@@ -25,14 +35,15 @@
  -->	<button onclick="document.write(5)">This will delete existing html</button>
 	<button onclick=eFunc()>external</button>
 	<button onclick=myF()>func</button>
-	<p id="demo1"></p>
-	<script> 
+	<p id="demo1" onchange="changeTest()">b</p>
+	<!-- <p id= "demo2">a</p> -->
+	<!-- <script> 
 		var x,y;
 		x = 5;
 		y = 6;
 		y = x+3;
 		document.getElementById("demo1").innerHTML= typeof(y);
-	</script>
+	</script> -->
 	<script src="myS.js"></script>
 	<button onclick='document.getElementById("paraph1").style.fontSize="35px"'> change font</button>
 	<button onclick='document.getElementById("paraph1").style.display="none"'> hide </button>
