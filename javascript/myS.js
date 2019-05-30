@@ -6,4 +6,5 @@ function eFunc(){
 	// document.getElementById("demo1").innerHTML= typeof cars;
 	// document.getElementById("demo1").innerHTML= Date();
 	document.getElementById("demo1").innerHTML= str.search("ing");
+	
 }
