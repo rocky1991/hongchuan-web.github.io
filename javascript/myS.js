@@ -5,6 +5,7 @@ function eFunc(){
 	var str = "mystrimghahaimg"
 	// document.getElementById("demo1").innerHTML= typeof cars;
 	// document.getElementById("demo1").innerHTML= Date();
-	document.getElementById("demo1").innerHTML= str.search("ing");
+	// document.getElementById("demo1").innerHTML= str.search("ing");
+	document.getElementById("demo1").innerHTML = cars.toString();
 	
 }
