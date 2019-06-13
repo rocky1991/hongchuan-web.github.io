@@ -4,4 +4,5 @@ function myF(){
 	var arr = [5,3,2,6]
 	// document.getElementById("demo1").innerHTML = d1.getDate();
 	document.getElementById("demo1").innerHTML= Math.max(5,3,2,6);
+	
 }
