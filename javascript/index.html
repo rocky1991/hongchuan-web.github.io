@@ -3,7 +3,9 @@
 <head>
 	<title> for javascript</title>
 	<script>
+		
 		function myF(){
+
 			document.getElementById("demo1").innerHTML="function add content"
 		}
 		function displayDate(){
@@ -17,16 +19,31 @@
 	
 </head>
 <body>
+	<p id="demo2"> </p>
+	<script>
+		"use strict";
+	</script>
+		<script>
+		var a,b;
+		a = 5;
+		// b = 6
+	</script>
+
+	<script>	
+		{
+			// var as = 5;
+			let as = 5;
+		}
+		
+		d = 7;
+		document.getElementById("demo2").innerHTML = as;
+
+	</script>
 	<button onclick="myF()">second external</button>
 	<script src="myS1.js"></script>
 	<button onclick="strLen()">Str Len</button>
 	<button onclick="displayDate()">Time is </button>
 	<button onclick="this.innerHTML=Date()">The time is </button><br>
-	<script>
-		var a,b;
-		a = 5;
-		// b = 6
-	</script>
 
 	<script>
 		console.log("first log!!")
