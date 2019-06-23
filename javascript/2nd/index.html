@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+	<style>
+		#container {
+			width: 400px;
+			height: 400px;
+			position: relative;
+			background: yellow;
+		}
+		#animate {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			background: red;
+		}
+	</style>
+
+</head>
+<body onload="checkCookies()">
+	<div id="mouseTest" onmouseover="mOver(this)" onmouseout="mOut(this)" 
+	onmouseup="onUp(this)" onmousedown="onDown(this)" style="background-color:white;width:120px"> Mouse over test
+	</div>
+	<script>
+		function onUp(id) {
+			id.style.color = "purple";
+		}
+		function onDown(id) {
+			id.style.color = "yellow";
+		}
+		function mOver(id) {
+			// id.innerHTML = "over";
+			id.style.color = "red"
+		}
+		function mOut(id) {
+			// id.innerHTML = "out";
+			id.style.color = "green"
+		}
+		function fname(id) {
+			// var x = document.getElementById();
+			id.value = id.value.toUpperCase();
+		}
+	</script>
+	Enter name: <input type="text" id="fname" onchange="fname(this)">
+	<h1 id = "testCookie"></h1>
+	<script>
+		function checkCookies() {
+			var text = "";
+			if (navigator.cookieEnables == true){
+				text = "enabled";
+			} else {
+				text = "not enabled";
+			}
+			document.getElementById("testCookie").innerHTML = text;
+		}
+	</script>
+	<h1 onclick="changeText(this)">Click</h1>
+	<script>
+		function changeText(id) {
+			id.innerHTML = "Ooops";
+		}
+	</script>
+	<h1 onclick="this.innerHTML = 'Ooops'">Click</h1>
+	<button onclick="myMove()">animate</button>
+	<script>
+		function myMove() {
+			var elem = document.getElementById("animate");   
+  			var pos = 0;
+  			var id = setInterval(frame, 10);
+  			function frame() {
+    			if (pos == 350) {
+     			 	clearInterval(id);
+    			} else {
+     				pos++; 
+      				elem.style.top = pos + "px"; 
+      				elem.style.left = pos + "px"; 
+    			}			
+  			}
+		}
+	</script>
+	<div id ="container">
+		<div id = "animate">my animation</div>
+	</div>
+
+	<p class="test1">test paragraph</p>
+	<p id = "test2">test2</p>
+
+	<script>
+		document.getElementsByClassName("test1")[0].innerHTML= "hello";
+		// document.write(Date());
+		
+	</script>
+	<button onclick= "document.getElementById('test2').style.color = 'red';">turn red</button>
+</body>
