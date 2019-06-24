@@ -17,10 +17,40 @@
 
 </head>
 <body onload="checkCookies()">
+	<button id="rmL" onclick="removeAlert"> remove listener</button>
+	<button id="listener"> listener</button>
+	<h1 id="listenerAct">a</h1>
 	<div id="mouseTest" onmouseover="mOver(this)" onmouseout="mOut(this)" 
 	onmouseup="onUp(this)" onmousedown="onDown(this)" style="background-color:white;width:120px"> Mouse over test
 	</div>
 	<script>
+		function removeAlert() {
+			document.getElementById("listener").removeEventListener("click",alertHW);
+		}
+		
+		window.addEventListener("resize",function(){
+			document.getElementById("listenerAct").innerHTML = Math.random();
+		})
+		document.getElementById("listener").addEventListener("mouseout",function() {
+			myFunc(this);
+		});
+		function myFunc(id){
+			id.innerHTML = "test param";
+		}
+
+		document.getElementById("listener").addEventListener("click",alertHW);
+		function alertHW() {
+			alert("hello world");
+		}
+		document.getElementById("listener").addEventListener("click",function() {
+			alert("second alert!");
+		})
+		document.getElementById("listener").addEventListener("mouseover",function(){
+			document.getElementById("listenerAct").innerHTML += "mouse over <br>";
+		})
+		function displayDate() {
+			document.getElementById("listenerAct").innerHTML = Date();
+		}
 		function onUp(id) {
 			id.style.color = "purple";
 		}

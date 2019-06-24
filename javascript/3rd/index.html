@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+	<button id="alert"> test remove elements</button>
+	<p id="alertmsg">alert msg</p>
+	<p id="display"> display</p>
+	<button id="removeAlert" onclick="removeAlert()"> remove alert</button>
+	<script> 
+		document.getElementById("alertmsg").addEventListener("mouseover",displayR)
+		document.getElementById("alert").addEventListener("click",alert1);
+
+		function displayR() {
+			document.getElementById("display").innerHTML = Math.random();
+		}
+		function removeAlert(){
+			document.getElementById("alert").removeEventListener("click",alert1);
+		}
+		
+
+		function alert1() {
+			alert("hello world");
+			// document.getElementById("alertmsg").innerHTML = "clicked";
+		}
+	</script>
+</body>
