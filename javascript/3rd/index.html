@@ -3,6 +3,45 @@
 	<title id="domNav"> DOM navigation</title>
 </head>
 <body>
+	<div id="createElem">
+		<p id="any"> any paragraph</p>
+	</div>
+	<button onclick="createE()">create</button>
+	<button onclick="insertB()">insert</button>
+	<button onclick="deleteE()">delete</button>
+	<button onclick="replaceE()">replace</button>
+	<script>
+		function replaceE() {
+			var textNode = document.createTextNode("text");
+			var replacep = document.createElement("p");
+			replacep.appendChild(textNode);
+
+			var re = document.getElementById("createElem");
+			re.replaceChild(replacep,document.getElementById("any"));
+		}
+
+		function deleteE() {
+			var e = document.getElementById("createElem");
+			var b = document.getElementById("any");
+
+			b.parentNode.removeChild(b);
+			// e.removeChild(b);
+		}
+		function insertB() {
+			var textNode = document.createTextNode("create text");
+			var para = document.createElement("p");
+			para.appendChild(textNode);
+			document.getElementById("createElem").insertBefore(para, document.getElementById("any"))
+		}
+		function createE() {
+			var textNode = document.createTextNode("created paragraph");
+			var para =  document.createElement("p");
+			para.appendChild(textNode);
+			document.getElementById("createElem").appendChild(para);
+		}
+	</script>
+
+
 	<button onclick="domNav()">click</button>
 	<script>
 		function domNav() {
