@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <head>
+	<title id="domNav"> DOM navigation</title>
 </head>
 <body>
+	<button onclick="domNav()">click</button>
+	<script>
+		function domNav() {
+			document.getElementById("display").innerHTML = document.getElementById("domNav").firstChild.nodeValue;
+		}
+	</script>
 	<button id="alert"> test remove elements</button>
 	<p id="alertmsg">alert msg</p>
 	<p id="display"> display</p>
