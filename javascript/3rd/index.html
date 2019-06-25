@@ -3,6 +3,31 @@
 	<title id="domNav"> DOM navigation</title>
 </head>
 <body>
+	<button onclick="promptFunc()"> prompt</button>
+	<p id="prompt"></p>
+	<button id="confirm" onclick="confirmf()">confirm</button>
+	<p id="confirmp"></p>
+	<script>
+		function promptFunc() {
+			var answer = prompt("yes or \nno");
+			var txt;
+			if (answer == null || answer == "") {
+				txt = "No txt";
+			} else {
+				txt = answer;
+			}
+			document.getElementById("prompt").innerHTML = txt;
+		}
+		function confirmf() {
+			var txt;
+			if(confirm("press ok")) {
+				txt = "OK";
+			} else {
+				txt = "NO";
+			}
+			document.getElementById("confirmp").innerHTML = txt;
+		}
+	</script>
 	<p id="jen"></p>
 	<p id="ol"></p>
 	<p id="lan"></p>
