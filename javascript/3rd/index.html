@@ -3,6 +3,52 @@
 	<title id="domNav"> DOM navigation</title>
 </head>
 <body>
+	<p id="jen"></p>
+	<p id="ol"></p>
+	<p id="lan"></p>
+	<p id="pf"></p>
+	<p id="cookies"></p>
+	<p id="appN"></p>
+	<p id="appCodeName"></p>
+	<p id="prod"></p>
+	<p id="bver"></p>
+	<p id="useragen"></p>
+	<button onclick="back()">back</button>
+	<button onclick="forward()">forward</button>
+	<script>
+		document.getElementById("jen").innerHTML = navigator.javaEnabled();
+		document.getElementById("ol").innerHTML = navigator.onLine;
+		document.getElementById("lan").innerHTML = navigator.language;
+		document.getElementById("pf").innerHTML = navigator.platform;
+		document.getElementById("useragen").innerHTML = navigator.userAgent;
+		document.getElementById("bver").innerHTML = navigator.appVersion;
+		document.getElementById("prod").innerHTML = navigator.product;
+		document.getElementById("appN").innerHTML = navigator.appName;
+		document.getElementById("cookies").innerHTML = navigator.cookieEnabled;
+		document.getElementById("appCodeName").innerHTML = navigator.appCodeName;
+		function back() {
+			window.history.back()
+		}
+		function forward() {
+			window.history.forward();
+		}
+	</script>
+	<p id="locationHref"></p>
+	<p id="locationHN">sadf</p>
+	<p id="locationPN"></p>
+	<p id="locationProtocol"></p>
+	<p id="locationAssign"></p>
+	<button onclick="newD()">load new document</button>
+	<script>
+		document.getElementById("locationHref").innerHTML = window.location.href;
+		document.getElementById("locationHN").innerHTML = window.location.hostname;
+		document.getElementById("locationPN").innerHTML = window.location.pathname;
+		document.getElementById("locationProtocol").innerHTML = window.location.protocol;
+		function newD() {
+			window.location.assign("https://www.google.com/");
+		}
+		
+	</script> 
 	<p id="screenW"></p>
 	<p id="screenH"></p>
 	<p id="screenAW"></p>
