@@ -3,6 +3,32 @@
 	<title id="domNav"> DOM navigation</title>
 </head>
 <body>
+	<p id="screenW"></p>
+	<p id="screenH"></p>
+	<p id="screenAW"></p>
+	<p id="screenAH"></p>
+	<p id="screenCD"></p>
+	<p id="screenPD"></p>
+	<script>
+		document.getElementById("screenW").innerHTML = screen.width;
+		document.getElementById("screenH").innerHTML = screen.height;
+		document.getElementById("screenAW").innerHTML = screen.availWidth;
+		document.getElementById("screenAH").innerHTML = screen.availHeight;
+		document.getElementById("screenCD").innerHTML = screen.colorDepth;
+		document.getElementById("screenPD").innerHTML = screen.pixelDepth;
+
+	</script>
+	<button onclick="window.open()"> open new windown</button>
+	<button onclick="window.close()">close window</button>
+	<button onclick="window.moveTo()">move</button>
+	<button onclick="window.resizeTo()">resize</button>
+	<p id="dId"> document id</p>
+	<script>
+		var width = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
+		var height = window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;
+
+		window.document.getElementById("dId").innerHTML = width + " " + height;
+	</script>
 	<div id="createElem">
 		<p id="any"> any paragraph</p>
 	</div>
