@@ -1,0 +1,1 @@
+Chrome ignores cookies from local pages
