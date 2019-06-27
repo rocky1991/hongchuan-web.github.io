@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<button onclick="clearTimeout(sTO)"> clear timeout</button>
+	<button onclick="clearInterval(sInt)"> clear interval</button>
+
+	<button onclick="sInt=setInterval(myFunc1,1000)">Interval</button>
+	<div id="div1">
+		<p> yes </p>
+	</div>
+	<button onclick="sTO=setTimeout(myFunc,3000)"> timeout</button>
+	<script>
+		function myFunc1() {
+			var para = document.createElement("p");
+			var txt = document.createTextNode("hello");
+			para.appendChild(txt);
+
+			document.body.appendChild(para);
+		}
+		function myFunc() {
+			var para = document.createElement("p");
+			var txt = document.createTextNode("hello world");
+			para.appendChild(txt);
+			var divN = document.getElementById("div1");
+			divN.appendChild(para);
+		}
+	</script>
+</body>
+</html>
