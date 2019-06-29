@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<p id="str"></p>
+	<p id="pars"></p>
+	<p id="retrieve"></p>
+	<script>
+		var myObj1 = { name: "John", age: 11};
+		var strObj = JSON.stringify(myObj1);
+		
+		var myObj2 = '{ "name": "John", "age": "11"}';
+		var strObj2 = JSON.parse(myObj2);
+		document.getElementById("str").innerHTML = strObj;
+		document.getElementById("pars").innerHTML = strObj2.name;
+		localStorage.setItem("strObj",strObj);
+
+		var txt = localStorage.getItem("strObj");
+		var obj = JSON.parse(txt);
+		document.getElementById("retrieve").innerHTML = obj.name;
+	</script>
+	
+</body>
+</html>
