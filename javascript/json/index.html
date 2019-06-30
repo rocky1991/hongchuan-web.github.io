@@ -4,10 +4,51 @@
 	<meta charset="UTF-8">
 </head>
 <body>
+	<p id="reviver"></p>
+	<p id="objLoop"></p>
+	<script> 
+		var personObj = { name:"john", age: 11,"birthday":"1991-11-01"};
+
+		var person = JSON.stringify(personObj);
+		var jsO = JSON.parse(person, function (key, value) {
+			if (key == "birthday") {
+				return new Date(value);
+			} else {
+				return value;
+			}
+		});
+		document.getElementById("reviver").innerHTML = jsO.birthday;
+		for (x in jsO) {
+			document.getElementById("objLoop").innerHTML += jsO[x];
+		}
+	</script>
+	<p id="jsonDemo"></p>
+	<button onclick="getJson()">json demo</button>
+	<script>
+		function getJson() {
+			// var txt = '{"name": "john","age": 31}';
+			// document.getElementById("jsonDemo").innerHTML = JSON.parse(txt).name;
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					var myObj = JSON.parse(this.responseText);
+					document.getElementById("jsonDemo").innerHTML = JSON.stringify(myObj.pets);
+					// document.getElementById("jsonDemo").innerHTML = myObj[0];
+				}
+			}
+			xhttp.open("GET","json_demo.txt",true);
+			// xhttp.open("GET","json_demo_array.txt",true);
+			xhttp.overrideMimeType("application/json"); 
+			// xhttp.setRequestHeader("Content-type","application/json");
+			xhttp.send();
+		}
+	</script>
+
 	<p id="str"></p>
 	<p id="pars"></p>
 	<p id="retrieve"></p>
-	<script>
+<!-- 	<script>
+
 		var myObj1 = { name: "John", age: 11};
 		var strObj = JSON.stringify(myObj1);
 		
@@ -20,7 +61,7 @@
 		var txt = localStorage.getItem("strObj");
 		var obj = JSON.parse(txt);
 		document.getElementById("retrieve").innerHTML = obj.name;
-	</script>
+	</script> -->
 	
 </body>
 </html>

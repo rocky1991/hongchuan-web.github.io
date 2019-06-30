@@ -9,3 +9,7 @@ ASP is not read in detail
 database is not read in detail
 
 AJAX needs a redo, From PHP to Examples
+
+JS vs JQuery skipped
+
+JS Examples skipped
