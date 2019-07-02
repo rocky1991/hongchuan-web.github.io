@@ -32,4 +32,14 @@ select * from Persons limit 3;
 select min(ID) from Persons;
 select avg(ID) from Persons;
 select sum(ID) from Persons;
+select * from Persons where city like 'b%';
+select * from Persons where city like '_o%';
+select * from Persons where city REGEXP '^b';
 
+
+regular expression reference is wrong!!!!!!!!
+
+select * from Persons where city not REGEXP '^[a-c]';
+select * from Persons where ID in (11);
+select * from Persons where ID not in (11)
+select * from Persons where ID between 0 and 20 and not city in ('wa');
