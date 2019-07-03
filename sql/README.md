@@ -43,3 +43,5 @@ select * from Persons where city not REGEXP '^[a-c]';
 select * from Persons where ID in (11);
 select * from Persons where ID not in (11)
 select * from Persons where ID between 0 and 20 and not city in ('wa');
+
+Stopped SQL from "SQL AS" 

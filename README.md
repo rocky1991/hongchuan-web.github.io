@@ -1,3 +1,3 @@
 # hongchuan website
 
-get to html list
+SQL is not complete (mysql);
