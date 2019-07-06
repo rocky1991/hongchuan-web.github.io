@@ -4,11 +4,23 @@
 </head>
 <body>
 	<?php 
-		$cars = array(
-			array("Volve", 22,18),
-			array("bmw",11,2)
-		);
-		echo $cars[0][0];
+		$servername = "localhost";
+		$username = "tester1";
+		$password = "1122";
+		$mydatabase = "myDB1";
+
+		$conn = new mysqli($servername, $username, $password, $mydatabase );
+		if ($conn-> connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		}
+
+		$sql = "create database myDB2";
+		if ($conn-> query($sql) === TRUE) {
+			echo "db created successfully";
+		} else {
+			echo "error happend : " . $conn-> error;
+		}
+		$conn->close();
 	?>
 </body>
 </html>

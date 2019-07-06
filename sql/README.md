@@ -45,3 +45,12 @@ select * from Persons where ID not in (11)
 select * from Persons where ID between 0 and 20 and not city in ('wa');
 
 Stopped SQL from "SQL AS" 
+
+select user from mysql.user;
+create user 'tester1'@'localhost' identified by '1122';
+create database myDB1;
+grant all privileges on myDB1.* to 'tester1'@'localhost';
+quit;
+mysql -u tester1 -p -h localhost
+GRANT ALL PRIVILEGES ON database.table TO 'user'@'localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost';
