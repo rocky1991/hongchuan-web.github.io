@@ -6,7 +6,7 @@
 			border: 1px solid black;
 			border-collapse: collapse;
 		}
-		th, td {
+		th, td { 
 			padding: 5ps;
 		}
 	</style>
