@@ -57,6 +57,15 @@
 	} else {
 		echo "invalid url";
 	}
+	echo "<br>";
+	$int = 10;
+	if (filter_var($int, FILTER_VALIDATE_INT, array("options"=> array("min_range"=>1, "max_range"=>200)))=== false) {
+		echo "not within range";
+	} else {
+		echo "within range";
+	}
+	echo "<br>";
+
 	?>
 </body>
 </html>
