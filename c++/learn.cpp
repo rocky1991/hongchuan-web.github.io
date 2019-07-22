@@ -2,9 +2,22 @@
 using namespace std;
 
 int main() {
+	string input;
+	string input1;
+	// cout << "Type full name:";
+	// cin >> input;
+	// cout << "The full name is " << input << endl;
+	cout <<" Type full name again: ";
+	getline (cin, input1);
+	cout << "The full name is: " << input1 << endl;
+
 
 	string greeting = "no need to include string library";
 	cout << greeting << endl;
+	cout << "the length is " << greeting.length() <<endl;
+	cout << "index at 0: " << greeting[0]<< endl;
+	greeting[0] = '3';
+	cout << "change at index 0: " << greeting<<endl;
 
 	double d1 = 15e3;
 	cout << d1 << endl;
