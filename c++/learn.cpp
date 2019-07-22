@@ -2,6 +2,21 @@
 using namespace std;
 
 int main() {
+
+	string greeting = "no need to include string library";
+	cout << greeting << endl;
+
+	double d1 = 15e3;
+	cout << d1 << endl;
+
+	char aCh = 'B';
+	cout << aCh << endl;
+
+	int x;
+	cout << "Type a number";
+	// cin >> x;
+	cout << "Your number is " << x << endl;
+
 	// this is comment
 	cout << "hello world!\n" << endl;
 	cout << "another hello" << endl;
