@@ -1,4 +1,10 @@
 import numpy as np 
+import pandas as pd 
+
+s = pd.Series(np.array([1,2,2,3]), index=['b','c','d', 'e'])
+s = pd.Series({'a':5, 'b':8})
+s = pd.Series(5, index=)
+
 
 # rows of data set is called the size of data
 # columns of data set is called the dimension of data
