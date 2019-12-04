@@ -27,6 +27,15 @@ public class Computer {
 		this.processorSpeed = processorSpeed;
 	}
 
+	/** Constructor with 3 parameters: processor, ramSize, diskSize
+		@param processor
+		@param ramSize
+		@param diskSize
+	*/
+	public Computer(String processor, double ramSize, int diskSize) {
+		this("aManu", processor, ramSize, diskSize, 5.5);
+	}
+
 	public double computePower() { return ramSize * processorSpeed; }
 	public double getRamSize() { return ramSize; }
 	public double getProcessorSpeed() { return processorSpeed; }
@@ -46,8 +55,21 @@ public class Computer {
 		String result = "Nanufacturer: " + manufacturer + "\nCPN: " + processor + "\nRAM: " + ramSize + "\nDisk: " + diskSize + "\nProcessor speed: " + processorSpeed + "\n";
 		return result;
 	}
-	public static void main(String [] args) {
-		Computer c = new Computer();
+
+	/** Compares power of this computer and its argument computer 
+		@param aComputer The computer being compared to this computer
+		@return -1 if this computer has less power
+				0 if same power
+				1 otherwise
+	*/
+	public int comparePower(Computer aComputer) {
+		if (this.computePower() < aComputer.computePower()) {
+			return -1;
+		} else if(this.computePower() == aComputer.computePower()) {
+			return 0;
+		} else {
+			return 1;
+		}
 	}
 
 }
