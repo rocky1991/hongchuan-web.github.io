@@ -1,5 +1,5 @@
 /** Class that represents a computer */
-public abstract class Computer {
+public class Computer {
 
 	// Data Fields
 	private String manufacturer;
@@ -49,18 +49,6 @@ public abstract class Computer {
 	public void setDiskSize(int ds) { diskSize = ds; }
 	public void setProcSpeed(double speed) { processorSpeed = speed; }
 
-	@Override
-	public boolean equals(Object obj) {
-		System.out.println("Computer computer objects");
-		if (obj == this) return true;
-		if (obj == null) return false;
-		if (obj.getClass() == this.getClass()){
-			Computer aCom = (Computer) obj;
-			return manufacturer.equals(aCom.manufacturer) && processor.equals(aCom.processor);
-		} else{
-			return false;
-		}
-	}
 
 
 	public String toString() {
@@ -83,6 +71,19 @@ public abstract class Computer {
 			return 1;
 		}
 	}
-	public abstract double costBenefit();
+
+	@Override
+	public boolean equals(Object obj) {
+		System.out.println("Computer computer objects");
+		if (obj == this) return true;
+		if (obj == null) return false;
+		if (obj.getClass() == this.getClass()){
+			Computer aCom = (Computer) obj;
+			return manufacturer.equals(aCom.manufacturer) && processor.equals(aCom.processor);
+		} else{
+			return false;
+		}
+	}
+  
 
 }
