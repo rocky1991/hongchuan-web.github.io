@@ -5,7 +5,8 @@ import "io/ioutil"
 import "io"
 import "os"
 import "time"
-import "strings"
+// import "strings"
+import "regexp"
 // import "math/rand"
 // import "math"
 
@@ -31,7 +32,6 @@ func main() {
 	}
 	fmt.Println(string(data) + "\n")
 	var newData = string(data)
-	newData = strings.Trim(newData, "5")
 
 
 	fmt.Println(len(newData))
@@ -44,7 +44,13 @@ func main() {
 		}
 	}
 
-	fmt.Println(newData1)
+	fmt.Println("regular expression")
+
+	re := regexp.MustCompile("[0-9]")
+	fmt.Println(re.ReplaceAllString(newData, "" ))
+
+
+	// fmt.Println(newData1)
 
 	fmt.Println("The time is", time.Now())
 
