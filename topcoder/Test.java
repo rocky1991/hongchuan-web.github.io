@@ -1,3 +1,4 @@
+import java.lang.Math.*;
 public class Test {
 	public static void main(String [] args) {
 		String myStr = "abc";
@@ -11,5 +12,7 @@ public class Test {
 		System.out.println(test);
 		boolean c = true;
 		System.out.println(c);
+
+		System.out.println(Math.pow(2, 5));
 	}
 }
