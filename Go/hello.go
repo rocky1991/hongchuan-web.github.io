@@ -7,6 +7,8 @@ import "os"
 import "time"
 // import "strings"
 import "regexp"
+// import 	"strings"
+import 	"strconv"
 // import "math/rand"
 // import "math"
 
@@ -19,6 +21,8 @@ import "regexp"
 
 // var c, python, java bool
 func main() {
+	var i int = 5
+	fmt.Println(strconv.Itoa(i))
 
 	// var i int = 2
 	// var boo1, boo2 bool = false, false
