@@ -1,0 +1,14 @@
+The methods are written only for quantifiable traits. Please discuss if you think this would be a limitation for any applications and give reasons for your answers. 
+
+
+What was your biggest take away from this paper? It can be a criticism, a particular element you enjoyed, something that inspired you, something that made you think more deeply about the methods or logic behind them etc. 
+
+How do feel about the anomalous result  that the authors experienced with the Pτ metric (conclusion, paragraph 3, page 233)? Do you think their reasoning that it may be due to the lack of diversity in the analysed populations is correct? Please give your reasons.
+
+
+How can the proposed metrics (PFET and Pτ) be used for parameter control to influence selection pressure in Evolutionary Algorithms? (Hint: See Section 5: Parameter Control in Evolutionary Algorithms – Eiben et al. (1999))
+
+
+Pτ can provide us with the direction of selection pressure (negative values). Discuss in which real-world application we can use Pτ metrics to quantify selection pressure?
+
+If we introduce noise to the population size, how will this affect the two metrics (PFET and Pτ)? Which of the metrics will perform better? Discuss.
