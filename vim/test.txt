@@ -1,0 +1,5 @@
+This is a test file for learning vim.
+This is a sentencThis is a sentenceeThis is a sentence.
+This is a sentencThis is a sentenceThis is a sentenceThis is a sentenceThis is a sentenceThis is a sentenceThis is a sentenceThis is a sentenceoe
+
+
