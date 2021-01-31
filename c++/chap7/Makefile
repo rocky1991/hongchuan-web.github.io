@@ -1,12 +1,12 @@
 CC = g++
-EXECS =  cerr
+EXECS =  first_cal
 
 
 .PHONY:
 	clean
 ALL: $(EXECS)
 	echo "All execs done!"
-cerr: cerr.cpp
+first_cal: first_cal.cpp
 	-$(CC) -o $@ $^
 clean:
 	rm -f $(EXECS)
