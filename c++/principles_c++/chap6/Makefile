@@ -1,5 +1,5 @@
 CC = g++
-EXECS =  calculator02buggy 
+EXECS =  calculator 
 
 
 .PHONY:
