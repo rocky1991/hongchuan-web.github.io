@@ -7,6 +7,8 @@ struct Node {
 };
 
 Node* insert_head(Node* head, int d) {
+	cout << "insert node to the front of the list, node value is " << d << endl;
+	
 	if (head == NULL) {
 		head = new Node{d, NULL};
 	} else {
@@ -16,6 +18,7 @@ Node* insert_head(Node* head, int d) {
 	return head;
 }
 Node* insert(Node* head, int d) {
+	cout << "insert node to the end of the list, node value is " << d << endl;
 	if (head == NULL) {
 		head = new Node{d, NULL};
 	} else {
@@ -32,6 +35,7 @@ Node* insert(Node* head, int d) {
 	return head;	
 }
 Node* clear_list(Node* head) {
+ 	cout << "clear list\n";
  
 	Node* temp;
 	while (head != NULL) {
@@ -42,6 +46,7 @@ Node* clear_list(Node* head) {
 	return head;
 }
 void print_singly_list(Node* head) {
+	cout << "print list\n";
 	if (head == NULL) {
 		cout << "list is empty\n";
 	} else {
@@ -63,15 +68,11 @@ int main() {
 	head = insert(head,11);
 	head = insert(head,15);
 
-	cout << "print list \n";
 	print_singly_list(head);
 	head = insert_head(head, 258);
 	head = insert_head(head, 32);
-	cout << "print list\n";
 	print_singly_list(head);
-	cout << "delete list\n";
 	head = clear_list(head);
-	cout << "print list \n";
 	print_singly_list(head);
 
 	return 0;
