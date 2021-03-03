@@ -1,12 +1,16 @@
 CC = gcc
 
 EXECS = hello temp_convert io count_char count_lines count_blanks \
-	exer1_9 1_10
+	exer1_9 1_10 wc exer1_12
 
 ALL: $(EXECS)
 	@echo "All done ~ $(EXECS)"
 
 hello: hello.c
+	$(CC) -o $@ $^
+exer1_12: exer1_12.c
+	$(CC) -o $@ $^
+wc: wc.c
 	$(CC) -o $@ $^
 
 1_10: 1_10.c
