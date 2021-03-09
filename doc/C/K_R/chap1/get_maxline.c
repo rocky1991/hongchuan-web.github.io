@@ -18,7 +18,7 @@ int main() {
 			copy(longest, line);
 		}
 	if (max > 0)
-		printf("%s", longest);
+		printf("the longest line is \n%s\n and the length is %d\n", longest, max);
 	return 0;
 }
 
@@ -35,6 +35,7 @@ int my_getline(char s[], int lim) {
 }
 void copy(char to[], char from[]) {
 	int i;
+	i = 0;
 	while((to[i] = from[i]) != '\0')
 		++i;
 }

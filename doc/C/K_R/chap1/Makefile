@@ -2,12 +2,14 @@ CC = gcc
 
 EXECS = hello temp_convert io count_char count_lines count_blanks \
 	exer1_9 1_10 wc exer1_12 count_w_arr exer1_13 exer1_14 power \
-	get_maxline
+	get_maxline exer1_17
 
 ALL: $(EXECS)
 	@echo "All done ~ $(EXECS)"
 
 hello: hello.c
+	$(CC) -o $@ $^
+exer1_17:exer1_17.c
 	$(CC) -o $@ $^
 get_maxline:get_maxline.c
 	$(CC) -o $@ $^
