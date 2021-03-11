@@ -5,6 +5,7 @@ int main() {
 	char cur_line[MAX_LINE];
 	int len;
 	while( (len = my_getline(cur_line, MAX_LINE)) >= 1) {
+		if (len == 1) continue;	
 		printf("%s\n", cur_line);
 		printf("len is %d\n", len);
 	}
