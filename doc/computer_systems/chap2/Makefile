@@ -1,8 +1,10 @@
 CC = gcc
-EXECS = byte_rep
+EXECS = byte_rep pp2_8
 ALL: $(EXECS)
 	@echo "All done~ $(EXECS)"
 byte_rep: byte_rep.c
+	@$(CC) -o $@ $^
+pp2_8:pp2_8.c
 	@$(CC) -o $@ $^
 .PHONY:
 	clean
