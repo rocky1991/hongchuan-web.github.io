@@ -1,10 +1,13 @@
 CC = gcc
 EXECS = exer2_1 exer2_2 atoi htoi squeeze exer2_4\
-	exer2_5
+	exer2_5 exer2_6 register
 ALL: $(EXECS)
 	@echo "all done ~ $(EXECS)"
-
+register:register.c
+	$(CC) -o $@ $^
 exer2_1: exer2_1.c
+	$(CC) -o $@ $^
+exer2_6: exer2_6.c
 	$(CC) -o $@ $^
 exer2_5:exer2_5.c
 	$(CC) -o $@ $^
